@@ -63,6 +63,13 @@ questions.Add(new ExamQuestion {
     CorrectAnswer = "B. One-to-Many",
     Explanation = "A parent record (Section) having multiple child records (Students) represents a One-to-Many relationship."
 });
+questions.Add(new ExamQuestion {
+    Number = 8,
+    QuestionText = "In a Student entity, what does the SectionId property represent?",
+    Options = new List<string> { "A. Primary Key", "B. Foreign key referencing Section", "C. Navigation property", "D. View model property" },
+    CorrectAnswer = "B. Foreign key referencing Section",
+    Explanation = "SectionId holds the key value linking a Student to its parent Section."
+});
             return View(questions);
         }
     }
