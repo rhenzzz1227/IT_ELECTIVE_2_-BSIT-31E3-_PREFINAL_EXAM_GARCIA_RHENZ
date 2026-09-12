@@ -70,6 +70,13 @@ questions.Add(new ExamQuestion {
     CorrectAnswer = "B. Foreign key referencing Section",
     Explanation = "SectionId holds the key value linking a Student to its parent Section."
 });
+questions.Add(new ExamQuestion {
+    Number = 9,
+    QuestionText = "What is a navigation property in an EF Core entity model?",
+    Options = new List<string> { "A. A URL router property", "B. It represents a relationship to another entity", "C. A UI component key", "D. A database column constraint" },
+    CorrectAnswer = "B. It represents a relationship to another entity",
+    Explanation = "Navigation properties allow traversing relationships between entity classes in code."
+});
             return View(questions);
         }
     }
