@@ -84,6 +84,13 @@ questions.Add(new ExamQuestion {
     CorrectAnswer = "B. Load related Section data together with Students",
     Explanation = "Include triggers eager loading for related navigation properties."
 });
+questions.Add(new ExamQuestion {
+    Number = 11,
+    QuestionText = "Why use a ViewModel instead of passing EF Core entities directly to a View?",
+    Options = new List<string> { "A. Entities cannot be rendered in HTML", "B. To combine or shape the data specifically needed by the view", "C. To speed up database performance", "D. ViewModel replaces the Controller layer" },
+    CorrectAnswer = "B. To combine or shape the data specifically needed by the view",
+    Explanation = "ViewModels decouple UI display requirements from domain entity structures."
+});
             return View(questions);
         }
     }
