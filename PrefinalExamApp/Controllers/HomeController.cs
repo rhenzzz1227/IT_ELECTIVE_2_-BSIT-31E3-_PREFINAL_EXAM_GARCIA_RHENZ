@@ -77,6 +77,13 @@ questions.Add(new ExamQuestion {
     CorrectAnswer = "B. It represents a relationship to another entity",
     Explanation = "Navigation properties allow traversing relationships between entity classes in code."
 });
+questions.Add(new ExamQuestion {
+    Number = 10,
+    QuestionText = "What is the purpose of calling .Include(s => s.Section) in an EF Core query?",
+    Options = new List<string> { "A. Filter students by section", "B. Load related Section data together with Students", "C. Delete associated sections", "D. Sort students by section name" },
+    CorrectAnswer = "B. Load related Section data together with Students",
+    Explanation = "Include triggers eager loading for related navigation properties."
+});
             return View(questions);
         }
     }
