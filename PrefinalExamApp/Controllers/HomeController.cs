@@ -56,6 +56,13 @@ questions.Add(new ExamQuestion {
     CorrectAnswer = "B. appsettings.json",
     Explanation = "Configuration settings like connection strings are stored in appsettings.json."
 });
+questions.Add(new ExamQuestion {
+    Number = 7,
+    QuestionText = "What type of relationship exists when one Section contains multiple Students?",
+    Options = new List<string> { "A. One-to-One", "B. One-to-Many", "C. Many-to-Many", "D. Self-referencing" },
+    CorrectAnswer = "B. One-to-Many",
+    Explanation = "A parent record (Section) having multiple child records (Students) represents a One-to-Many relationship."
+});
             return View(questions);
         }
     }
