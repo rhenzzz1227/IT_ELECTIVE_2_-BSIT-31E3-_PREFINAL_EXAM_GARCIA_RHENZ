@@ -49,6 +49,13 @@ questions.Add(new ExamQuestion {
     CorrectAnswer = "C. Generates EF Core models and a DbContext from an existing database",
     Explanation = "Scaffolding inspects the database schema and produces entity classes and DbContext configuration."
 });
+questions.Add(new ExamQuestion {
+    Number = 6,
+    QuestionText = "Where is the database connection string typically configured in ASP.NET Core?",
+    Options = new List<string> { "A. Program.cs", "B. appsettings.json", "C. HomeController.cs", "D. LaunchSettings.json" },
+    CorrectAnswer = "B. appsettings.json",
+    Explanation = "Configuration settings like connection strings are stored in appsettings.json."
+});
             return View(questions);
         }
     }
