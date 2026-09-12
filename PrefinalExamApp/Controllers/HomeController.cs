@@ -91,6 +91,13 @@ questions.Add(new ExamQuestion {
     CorrectAnswer = "B. To combine or shape the data specifically needed by the view",
     Explanation = "ViewModels decouple UI display requirements from domain entity structures."
 });
+questions.Add(new ExamQuestion {
+    Number = 12,
+    QuestionText = "What happens when eager loading is applied to a navigation property in EF Core?",
+    Options = new List<string> { "A. It loads the related Section navigation property", "B. It defers loading until accessed", "C. It executes separate SQL queries for each item", "D. It clears the cache" },
+    CorrectAnswer = "A. It loads the related Section navigation property",
+    Explanation = "Eager loading includes related data in the initial database query execution."
+});
             return View(questions);
         }
     }
