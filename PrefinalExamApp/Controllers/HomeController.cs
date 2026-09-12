@@ -147,6 +147,13 @@ questions.Add(new ExamQuestion {
     CorrectAnswer = "B. Display a Not Found (404) response/page",
     Explanation = "Returning NotFound() signals to the client that the requested resource identifier does not exist."
 });
+questions.Add(new ExamQuestion {
+    Number = 20,
+    QuestionText = "What is the main goal of combining data validation, foreign key constraints, and exception handling?",
+    Options = new List<string> { "A. Data integrity", "B. Code brevity", "C. Faster compilation", "D. Routing optimization" },
+    CorrectAnswer = "A. Data integrity",
+    Explanation = "Layering validation, database constraints, and robust error handling ensures application data integrity."
+});
             return View(questions);
         }
     }
