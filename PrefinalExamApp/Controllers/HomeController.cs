@@ -112,6 +112,13 @@ questions.Add(new ExamQuestion {
     CorrectAnswer = "A. Client-side validation can be bypassed",
     Explanation = "Users can disable JavaScript or craft malicious direct HTTP requests, bypassing client logic."
 });
+questions.Add(new ExamQuestion {
+    Number = 15,
+    QuestionText = "Which field attribute in a Student domain model requires custom logic or database constraints to enforce uniqueness?",
+    Options = new List<string> { "A. First Name", "B. Student Number should be unique", "C. Enrolled Date", "D. Section ID" },
+    CorrectAnswer = "B. Student Number should be unique",
+    Explanation = "Unique constraints prevent duplicate business identifiers like Student Numbers."
+});
             return View(questions);
         }
     }
