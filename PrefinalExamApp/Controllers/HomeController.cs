@@ -133,6 +133,13 @@ questions.Add(new ExamQuestion {
     CorrectAnswer = "B. To catch and handle exceptions that may occur during execution",
     Explanation = "Try-catch blocks catch database operation exceptions gracefully and allow custom recovery logic."
 });
+questions.Add(new ExamQuestion {
+    Number = 18,
+    QuestionText = "Which ASP.NET Core middleware configures a custom user-friendly error page for production environments?",
+    Options = new List<string> { "A. UseDeveloperExceptionPage()", "B. UseExceptionHandler()", "C. UseRouting()", "D. UseDatabaseErrorPage()" },
+    CorrectAnswer = "B. UseExceptionHandler()",
+    Explanation = "UseExceptionHandler catches unhandled exceptions and redirects users to a production error view."
+});
             return View(questions);
         }
     }
