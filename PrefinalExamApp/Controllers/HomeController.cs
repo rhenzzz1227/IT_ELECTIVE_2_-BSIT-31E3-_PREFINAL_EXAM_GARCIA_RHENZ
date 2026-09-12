@@ -98,6 +98,13 @@ questions.Add(new ExamQuestion {
     CorrectAnswer = "A. It loads the related Section navigation property",
     Explanation = "Eager loading includes related data in the initial database query execution."
 });
+questions.Add(new ExamQuestion {
+    Number = 13,
+    QuestionText = "Which type of validation runs in the user's web browser before submitting a form?",
+    Options = new List<string> { "A. Server-side validation", "B. Client-side validation", "C. Database validation", "D. Middleware validation" },
+    CorrectAnswer = "B. Client-side validation",
+    Explanation = "Client-side validation provides instant feedback using JavaScript/HTML5 prior to request dispatch."
+});
             return View(questions);
         }
     }
