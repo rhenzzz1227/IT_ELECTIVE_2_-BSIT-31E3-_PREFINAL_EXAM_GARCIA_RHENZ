@@ -126,6 +126,13 @@ questions.Add(new ExamQuestion {
     CorrectAnswer = "A. It protects data integrity even if application-level validation is bypassed",
     Explanation = "Database-level constraints serve as the ultimate defense for data consistency."
 });
+questions.Add(new ExamQuestion {
+    Number = 17,
+    QuestionText = "What is the primary reason to use try-catch blocks when saving changes to a database?",
+    Options = new List<string> { "A. To suppress all runtime errors automatically", "B. To catch and handle exceptions that may occur during execution", "C. To speed up execution", "D. Required by EF Core syntax" },
+    CorrectAnswer = "B. To catch and handle exceptions that may occur during execution",
+    Explanation = "Try-catch blocks catch database operation exceptions gracefully and allow custom recovery logic."
+});
             return View(questions);
         }
     }
