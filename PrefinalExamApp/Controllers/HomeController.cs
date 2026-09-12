@@ -105,6 +105,13 @@ questions.Add(new ExamQuestion {
     CorrectAnswer = "B. Client-side validation",
     Explanation = "Client-side validation provides instant feedback using JavaScript/HTML5 prior to request dispatch."
 });
+questions.Add(new ExamQuestion {
+    Number = 14,
+    QuestionText = "Why is server-side validation strictly necessary even if client-side validation is implemented?",
+    Options = new List<string> { "A. Client-side validation can be bypassed", "B. Server-side validation is faster", "C. Browsers do not support validation", "D. Server validation replaces models" },
+    CorrectAnswer = "A. Client-side validation can be bypassed",
+    Explanation = "Users can disable JavaScript or craft malicious direct HTTP requests, bypassing client logic."
+});
             return View(questions);
         }
     }
