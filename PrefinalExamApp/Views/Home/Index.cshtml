@@ -1,0 +1,44 @@
+﻿@model List<PrefinalExamApp.Models.ExamQuestion>
+
+@{
+    ViewData["Title"] = "Prefinal Exam Showcase";
+}
+
+<div class="container my-4">
+    <div class="text-center mb-5 p-4 bg-dark text-white rounded-3 shadow">
+        <h1 class="display-5 fw-bold">Prefinal Examination Reviewer</h1>
+        <p class="lead mb-0">IT ELECTIVE 2 – WEB SYSTEMS AND TECHNOLOGIES</p>
+    </div>
+
+    <div class="row g-4">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0 bg-light">
+                    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0">Question #@item.Number</h5>
+                        <span class="badge bg-warning text-dark">Verified</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="fw-semibold fs-5 text-secondary">@item.QuestionText</p>
+                        <ul class="list-group mb-3">
+                            @foreach (var opt in item.Options)
+                            {
+                                bool isCorrect = opt.StartsWith(item.CorrectAnswer.Substring(0, 1));
+                                <li class="list-group-item @(isCorrect ? "list-group-item-success fw-bold" : "")">
+                                    @opt
+                                    @if(isCorrect) {
+                                        <span class="badge bg-success float-end">Correct</span>
+                                    }
+                                </li>
+                            }
+                        </ul>
+                        <div class="alert alert-info mb-0 py-2">
+                            <small><strong>Explanation:</strong> @item.Explanation</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
