@@ -28,6 +28,13 @@ questions.Add(new ExamQuestion {
     CorrectAnswer = "B. Database-First",
     Explanation = "Database-First scaffolds entity classes and DbContext directly from an existing database schema."
 });
+questions.Add(new ExamQuestion {
+    Number = 3,
+    QuestionText = "What is the primary role of Object-Relational Mapping (ORM)?",
+    Options = new List<string> { "A. To compile C# code into SQL", "B. To render HTML views from models", "C. To map objects in code to relational database data", "D. To handle HTTP request routing" },
+    CorrectAnswer = "C. To map objects in code to relational database data",
+    Explanation = "ORM bridges object-oriented domain models and relational database tables."
+});
             return View(questions);
         }
     }
