@@ -35,6 +35,13 @@ questions.Add(new ExamQuestion {
     CorrectAnswer = "C. To map objects in code to relational database data",
     Explanation = "ORM bridges object-oriented domain models and relational database tables."
 });
+questions.Add(new ExamQuestion {
+    Number = 4,
+    QuestionText = "Which base class in EF Core manages database connections and entity tracking?",
+    Options = new List<string> { "A. DbContext", "B. Controller", "C. DbSet", "D. ModelBuilder" },
+    CorrectAnswer = "A. DbContext",
+    Explanation = "DbContext represents a session with the database and provides APIs for querying and saving data."
+});
             return View(questions);
         }
     }
