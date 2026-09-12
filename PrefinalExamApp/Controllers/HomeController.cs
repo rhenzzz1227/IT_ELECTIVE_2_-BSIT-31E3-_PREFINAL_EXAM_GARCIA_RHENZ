@@ -140,6 +140,13 @@ questions.Add(new ExamQuestion {
     CorrectAnswer = "B. UseExceptionHandler()",
     Explanation = "UseExceptionHandler catches unhandled exceptions and redirects users to a production error view."
 });
+questions.Add(new ExamQuestion {
+    Number = 19,
+    QuestionText = "How should an application handle an attempt to access a record ID that does not exist?",
+    Options = new List<string> { "A. Throw an unhandled NullReferenceException", "B. Display a Not Found (404) response/page", "C. Redirect to login", "D. Automatically create a blank record" },
+    CorrectAnswer = "B. Display a Not Found (404) response/page",
+    Explanation = "Returning NotFound() signals to the client that the requested resource identifier does not exist."
+});
             return View(questions);
         }
     }
