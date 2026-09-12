@@ -21,6 +21,13 @@ namespace PrefinalExamApp.Controllers
     CorrectAnswer = "C. It allows data to persist after the application stops",
     Explanation = "Databases provide non-volatile storage, preserving data across restarts."
 });
+questions.Add(new ExamQuestion {
+    Number = 2,
+    QuestionText = "Which Entity Framework Core approach creates models from an existing database?",
+    Options = new List<string> { "A. Code-First", "B. Database-First", "C. Model-First", "D. Data-First" },
+    CorrectAnswer = "B. Database-First",
+    Explanation = "Database-First scaffolds entity classes and DbContext directly from an existing database schema."
+});
             return View(questions);
         }
     }
