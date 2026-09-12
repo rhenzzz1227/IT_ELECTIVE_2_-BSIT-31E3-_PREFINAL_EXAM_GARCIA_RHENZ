@@ -119,6 +119,13 @@ questions.Add(new ExamQuestion {
     CorrectAnswer = "B. Student Number should be unique",
     Explanation = "Unique constraints prevent duplicate business identifiers like Student Numbers."
 });
+questions.Add(new ExamQuestion {
+    Number = 16,
+    QuestionText = "What benefit do database constraints (e.g., UNIQUE, FOREIGN KEY) provide?",
+    Options = new List<string> { "A. It protects data integrity even if application-level validation is bypassed", "B. Improves application startup time", "C. Automatically generates views", "D. Eliminates controller logic" },
+    CorrectAnswer = "A. It protects data integrity even if application-level validation is bypassed",
+    Explanation = "Database-level constraints serve as the ultimate defense for data consistency."
+});
             return View(questions);
         }
     }
